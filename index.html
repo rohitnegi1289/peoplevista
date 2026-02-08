@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>PeopleVista | Dashboard</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+    <!-- Background accents -->
+    <div class="dashboard-bg">
+        <span class="dash-shape shape-one"></span>
+        <span class="dash-shape shape-two"></span>
+    </div>
+
+    <div class="dashboard-container">
+
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="logo">
+                <img src="../assets/logo/peoplevista-logo.png" alt="PeopleVista Logo">
+            </div>
+
+            <ul class="menu">
+                <li class="active">
+                    <a href="#" data-page="dashboard">Dashboard</a>
+                </li>
+                <li>
+                    <a href="#" data-page="attendance">Attendance</a>
+                </li>
+                <li>
+                    <a href="#" data-page="leave">Leave</a>
+                </li>
+                <li>
+                    <a href="#" data-page="payroll">Payroll</a>
+                </li>
+                <li>
+                    <a href="#" data-page="recruitment">Recruitment</a>
+                </li>
+                <li>
+                    <a href="#" data-page="profile">Profile</a>
+                </li>
+            </ul>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+
+            <!-- Topbar -->
+            <header class="topbar">
+                <div class="top-search">
+                    <input type="text" placeholder="Search employees, ID, department...">
+                </div>
+                <div class="top-actions">
+                    <button class="icon-btn" title="Messages">
+                        <svg><use href="#icon-message"></use></svg>
+                    </button>
+                    <button class="icon-btn" title="Notifications">
+                        <svg><use href="#icon-bell"></use></svg>
+                    </button>
+                </div>
+            </header>
+
+            <!-- Dynamic Page Content -->
+            <section id="page-content" class="content">
+                <!-- Content loads here dynamically -->
+            </section>
+
+        </main>
+
+        <!-- Right Sidebar -->
+        <aside class="right-sidebar">
+            <div class="rs-section profile-snapshot">
+                <img src="../assets/images/default-profile.jpg" alt="Profile">
+                <h4>Rohit Negi</h4>
+                <p>PH09234</p>
+                <p>Territory Relationship Officer - Loans</p>
+
+                <div class="profile-actions">
+                    <button class="icon-btn" title="Edit">
+                        <svg><use href="#icon-edit"></use></svg>
+                    </button>
+                    <button class="icon-btn" title="Settings">
+                        <svg><use href="#icon-settings"></use></svg>
+                    </button>
+                    <button class="icon-btn" title="Logout" id="logoutBtn">
+                        <svg><use href="#icon-logout"></use></svg>
+                    </button>
+                </div>
+            </div>
+
+            <div class="rs-section">
+                <h5>🎉 Birthdays</h5>
+                <ul class="rs-list">
+                    <li><span>Amit</span><span>Today</span></li>
+                    <li><span>Pooja</span><span>Tomorrow</span></li>
+                </ul>
+            </div>
+
+            <div class="rs-section">
+                <h5>🏅 Work Anniversaries</h5>
+                <p class="rs-placeholder">No anniversaries today</p>
+            </div>
+        </aside>
+
+    </div>
+
+
+    <script src="../js/spa-navigation.js"></script>
+    
+    <!-- Load SVG Icons -->
+    <script>
+        fetch('../assets/icons/icons.svg')
+            .then(r => r.text())
+            .then(svg => document.body.insertAdjacentHTML('afterbegin', svg));
+    </script>
+</body>
+</html>
